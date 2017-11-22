@@ -5,7 +5,7 @@
   "main": "dist/cli.js",
   "types": "./dist/cli.d.ts",
   "bin": {
-    "mbtiles-terrain-server": "run.js"
+    "mbtiles-terrain-server": "bin/run.js"
   },
   "scripts": {
     "build": "tsc -w",
