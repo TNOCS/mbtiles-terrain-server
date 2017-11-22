@@ -1,6 +1,6 @@
 {
   "name": "mbtiles-terrain-server",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Import terrain tiles from a folder, and serve them either as TMS or slippy maps.",
   "main": "dist/cli.js",
   "types": "./dist/cli.d.ts",
