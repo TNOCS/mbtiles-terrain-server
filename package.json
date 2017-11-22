@@ -31,7 +31,8 @@
     "@types/express": "^4.0.39",
     "@types/generic-pool": "^3.1.0",
     "@types/node": "^8.0.53",
-    "@types/sqlite3": "^3.1.1"
+    "@types/sqlite3": "^3.1.1",
+    "typescript": "^2.6.1"
   },
   "repository": {
     "type": "git",
