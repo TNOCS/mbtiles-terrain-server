@@ -24,10 +24,10 @@ export class TilesServer {
     const getTile = (z: number, x: number, y: number, res: Response, raw = true) => {
       db.get(query(z, x, y), (err, row) => {
         if (err || !row) { return res.sendStatus(404); }
-        if (raw) { res.send(row.tile_data); }
+        if (raw) { return res.send(row.tile_data); }
         zlib.unzip(row.tile_data, (error, result) => {
           if (error || !result) {
-            return res.sendStatus(500);
+            res.sendStatus(500);
           } else {
             res.send(result);
           }

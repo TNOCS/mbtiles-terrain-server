@@ -28,11 +28,11 @@ var TilesServer = (function () {
                     return res.sendStatus(404);
                 }
                 if (raw) {
-                    res.send(row.tile_data);
+                    return res.send(row.tile_data);
                 }
                 zlib.unzip(row.tile_data, function (error, result) {
                     if (error || !result) {
-                        return res.sendStatus(500);
+                        res.sendStatus(500);
                     }
                     else {
                         res.send(result);
