@@ -1,0 +1,41 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch server",
+      "program": "${workspaceFolder}\\dist\\cli.js",
+      "args": [
+        "-v",
+        "-p",
+        "8811",
+        "./vmg_tiles.sqlite3"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/dist/**/*.js"
+      ]
+    }
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch importer",
+      "program": "${workspaceFolder}\\dist\\cli.js",
+      "args": [
+        "-v",
+        "-f",
+        "tms",
+        "-i",
+        // "c:/tmp/tiles/",
+        "./tiles.tms",
+        "./test.sqlite3"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/dist/**/*.js"
+      ]
+    }
+  ]
+}

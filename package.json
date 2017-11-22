@@ -1,0 +1,57 @@
+{
+  "name": "mbtiles-terrain-server",
+  "version": "0.0.0",
+  "description": "Import terrain tiles from a folder, and serve them either as TMS or slippy maps.",
+  "main": "dist/cli.js",
+  "types": "./dist/cli.d.ts",
+  "bin": {
+    "mbtiles-terrain-server": "run.js"
+  },
+  "scripts": {
+    "build": "tsc -w",
+    "clean": "rm ./test.sqlite3",
+    "patch-release": "npm version patch && npm publish && git push --follow-tags",
+    "minor-release": "npm version minor && npm publish && git push --follow-tags"
+  },
+  "dependencies": {
+    "@types/progress": "^2.0.0",
+    "async": "^2.6.0",
+    "command-line-args": "^4.0.7",
+    "command-line-usage": "^4.0.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "generic-pool": "^3.2.0",
+    "progress": "^2.0.0",
+    "sqlite3": "^3.1.13"
+  },
+  "devDependencies": {
+    "@types/async": "^2.0.45",
+    "@types/command-line-args": "^4.0.2",
+    "@types/cors": "^2.8.3",
+    "@types/express": "^4.0.39",
+    "@types/generic-pool": "^3.1.0",
+    "@types/node": "^8.0.53",
+    "@types/sqlite3": "^3.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TNOCS/mbtiles-terrain-server.git"
+  },
+  "keywords": [
+    "terrain",
+    "tiles",
+    "height",
+    "map",
+    "slippy",
+    "map",
+    "tms",
+    "mbtiles",
+    "sqlite"
+  ],
+  "author": "Erik Vullings <erik.vullings@gmail.com> (http://www.tno.nl)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TNOCS/mbtiles-terrain-server/issues"
+  },
+  "homepage": "https://github.com/TNOCS/mbtiles-terrain-server#readme"
+}

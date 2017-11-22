@@ -57,3 +57,9 @@ typings/
 # dotenv environment variables file
 .env
 
+# repo specific
+dist
+tiles.tms
+test.sqlite3
+vmg_tiles.sqlite3
+vmg_tiles - Copy.sqlite3
